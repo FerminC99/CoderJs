@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control de Personal</title>
+    <title>Control de Personal</title> 
+   
 </head>
-<body>
-    <script src="main.js"> </script>
+<body style="background-color: grey; text-align: center; line-height: 50px;">
+    
+    <h1>Control de personal</h1>
+    <section>
+        <h2>Buscar empleado</h2>
+    <div>
+         <label for="nombre">Ingrese nombre del empleado</label>
+    <input placeholder="Empleado" id="filtroPersonal" type="text"/> 
+    </div>
+    <div>
+     <button id="filtrar">Buscar</button>
+    </div>
+    </section>
+    
+    <h2>Agregue Nuevo Empleado</h2>
+    <div>
+        <label for="nombre">Ingrese nombre del empleado</label>
+        <input placeholder="Nombre" id="nombre" name="nombre"/> 
+    </div>
+    <div>
+        <label for="edad">Ingrese la edad del empleado</label>
+        <input placeholder="Edad" id="edad" name="edad"/> 
+    </div>
+    <div>
+        <label for="area">Ingrese el area del empleado</label>
+        <input placeholder="Area" id="area" name="area"/>
+    </div>
+    <div>
+        <label for="sueldo">Ingrese sueldo del empleado</label>
+        <input placeholder="Sueldo" id="sueldo" name="sueldo"/> 
+    </div>
+    <button id="agregar">
+        Agregar
+    </button>
+
+    <script src="main.js"></script>
 </body>
 </html>
