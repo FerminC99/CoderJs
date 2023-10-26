@@ -21,7 +21,10 @@ const Persona = function (nombre, edad, area, sueldo) {
  
  let lista = [persona1, persona2,persona3,persona4,persona5,persona6,persona7,persona8,persona9,persona10,persona11,persona12]
 
-
+ const guardaLocal = (clave, valor) => {localStorage.setItem(clave, valor)}
+ guardaLocal("listaPersonas", JSON.stringify(lista))
+ 
+ console.log(localStorage.getItem("listaPersonas"))
 const buttonfiltrar = document.getElementById("filtrar");
 buttonfiltrar.addEventListener("click", filtrarPersonal);
 
@@ -34,11 +37,9 @@ function filtrarPersonal() {
     const palabraClave = input.trim().toUpperCase();
     const resultado = lista.filter((persona) => persona.nombre.toUpperCase().includes(palabraClave));
 
-
 if (resultado.length >0){
     const container = document.createElement('div');
      
- 
 resultado.forEach((persona) => { 
   const card = document.createElement("div");
     
@@ -58,9 +59,6 @@ resultado.forEach((persona) => {
   sueldo.textContent = `sueldo: ${persona.sueldo}`;
   card.appendChild(sueldo);
 
-
-
-  
   container.appendChild(card);
 });
 
@@ -71,7 +69,6 @@ else {
   alert('No se encontro ningun empleado con ese nombre');
 }
 }
-
 
 function cargaEmpleado() {
    let nombre = document.getElementById("nombre").value.trim();
@@ -88,8 +85,10 @@ function cargaEmpleado() {
    console.log(persona)
 
   lista.push(persona);
+  localStorage.setItem("listaPersonas", JSON.stringify(lista));
   console.log("tamano lista: ", lista.length)
   console.log(lista)
+  console.log(localStorage.getItem("listaPersonas"))
   document.getElementById("nombre").value = '';
   document.getElementById("edad").value = '';
   document.getElementById("area").value = '';
@@ -97,12 +96,6 @@ function cargaEmpleado() {
 
   muestraLista(lista)
 }
-
-
-
-
-
-
 function muestraLista (lista){
   const caja = document.createElement("div");
   lista.forEach((persona) => {   
