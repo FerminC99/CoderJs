@@ -1,0 +1,32 @@
+[
+    {
+        "nombre" : "Luciano",
+        "edad" : "20",
+        "area" : "Mozo",
+        "sueldo" : "850"
+    },
+    {
+        "nombre" : "Sol",
+        "edad" : "27",
+        "area" : "Cocina",
+        "sueldo" : "1000"
+    },
+    {
+        "nombre" : "Abril",
+        "edad" : "23",
+        "area" : "Mozo",
+        "sueldo" : "800"
+    },
+    {
+        "nombre" : "Lucas",
+        "edad" : "19",
+        "area" : "Limpieza",
+        "sueldo" : "500"
+    },
+    {
+        "nombre" : "Maria",
+        "edad" : "32",
+        "area" : "Mozo",
+        "sueldo" : "950"
+    }
+]

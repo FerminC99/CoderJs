@@ -18,6 +18,8 @@ const Persona = function (nombre, edad, area, sueldo) {
  let persona10 = new Persona ("Brian", 22, "Deposito",800)
  let persona11 = new Persona ("Carlos", 30, "Limpieza", 400)
  let persona12 = new Persona ("Marisa", 50, "Limpieza",400)
+
+ let pruebaPersonal = "prueba.json";
  
  let lista = [persona1, persona2,persona3,persona4,persona5,persona6,persona7,persona8,persona9,persona10,persona11,persona12]
 
@@ -122,6 +124,16 @@ function muestraLista (lista){
   body.appendChild(caja);
 });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  fetch(pruebaPersonal)
+  .then(response => response.json())
+  .then(data => {
+      persona = data;
+      console.log (persona)
+      muestraLista(persona);
+  });
+});
 
 
 
