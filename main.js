@@ -68,7 +68,13 @@ section.appendChild(container);
 
 }
 else {
-  alert('No se encontro ningun empleado con ese nombre');
+  
+  Swal.fire({
+    icon: "question",
+    title: "A quien esta buscando?",
+    text: "No se encontro ningun empleado con ese nombre, Intente de nuevo!",
+    
+  });
 }
 }
 
@@ -79,7 +85,11 @@ function cargaEmpleado() {
    let sueldo = parseFloat(document.getElementById("sueldo").value);
    
    if (isNaN(edad) || isNaN(sueldo) || nombre === "" || area === '') { 
-    alert('Por favor ingresa valores válidos.');
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Ingese valores validos",
+    });;
     return;
   }
  
